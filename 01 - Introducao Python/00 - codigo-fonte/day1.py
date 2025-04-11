@@ -12,7 +12,7 @@ preco = 10.20
 condicao = True
 resultado_nulo = None
 
-# 4 - validando tipo de variaveis primitivas
+# 4 - validando tipo de variaveis
 print(type(texto))
 print(type(valor))
 print(type(preco))
