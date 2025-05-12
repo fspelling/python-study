@@ -1,2 +1,3 @@
 [flake8]
 ignore = E731
+ignore = E305
