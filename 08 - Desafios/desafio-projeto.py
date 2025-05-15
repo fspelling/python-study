@@ -14,6 +14,7 @@ else:
 
 print(result)
 
+
 # Desafio - Calc Pintura
 def calc_tinta(altura: int, largura: int) -> int:
     return altura * largura / rendimento
