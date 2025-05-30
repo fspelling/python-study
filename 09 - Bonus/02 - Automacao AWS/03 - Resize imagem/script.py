@@ -17,12 +17,12 @@ def lambda_handler(event, context):
 
             with tempfile.TemporaryDirectory() as tempdir:
                 download_path = os.path.join(tempdir, key)
-                s3.download_path(source_bucket, key, download_path)
+                s3_client.download_path(source_bucket, key, download_path)
 
                 upload_path = os.path.join(tempdir, thumb)
                 generate_thumbnail(download_path, upload_path)
 
-                s3.upload_path(DEST_BUCKET, thumb, upload_path)
+                s3_client.upload_path(DEST_BUCKET, thumb, upload_path)
                 print(f'Thumbnail image saved at {DEST_BUCKET}/{thumb}')
 
 
